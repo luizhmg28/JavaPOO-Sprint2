@@ -1,7 +1,11 @@
-public abstract class IntervencaoOperacional {
+package service;
+
+import model.TrechoRodovia;
+
+public abstract class ServicoOperacional {
     private String nomeServico;
 
-    public IntervencaoOperacional(String nomeServico) {
+    protected ServicoOperacional(String nomeServico) {
         this.nomeServico = nomeServico;
     }
 
@@ -9,6 +13,5 @@ public abstract class IntervencaoOperacional {
         return nomeServico;
     }
 
-    // Cada tipo de intervencao define sua propria forma de execucao.
     public abstract void executarServico(TrechoRodovia trecho);
 }
